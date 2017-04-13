@@ -1,0 +1,54 @@
+ <html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>VictorsTV</title>
+	
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+		google_ad_client: "ca-pub-1567441083773874",
+		enable_page_level_ads: true
+	  });
+	</script>
+</head>
+<body>
+<div class="container-fluid">
+
+	<div id="player"></div>	
+	<script>
+		var tag = document.createElement('script');
+
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		
+		var player;
+        function onYouTubeIframeAPIReady() {
+			player = new YT.Player('player', {
+				height: '390',
+				width: '640',
+				videoId: 'M7lc1UVf-VE',
+				events: {
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange
+				}
+			});
+		}
+		function onPlayerReady(event) {
+			event.target.playVideo();
+		}
+		
+		function onPlayerStateChange(event) {
+			
+		}
+		function stopVideo() {
+			player.stopVideo();
+		}
+	</script>
+
+	<!-- <img id="tv" class="img-responsive" src="src/images/modifiedTV.png" alt="TV.png"/> -->
+	
+</div>
+</body>
+</html>
